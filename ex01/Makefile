@@ -6,7 +6,7 @@
 #    By: juwkim <juwkim@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/23 01:13:48 by juwkim            #+#    #+#              #
-#    Updated: 2023/08/23 03:57:18 by juwkim           ###   ########.fr        #
+#    Updated: 2023/08/23 04:06:08 by juwkim           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ DEP_DIR         :=	$(BUILD_DIR)/dependency
 #    Define the source files                                                   #
 # ---------------------------------------------------------------------------- #
 
-SRCS            :=	$(shell find $(SRC_DIR) -name *.cpp)
+SRCS            :=	$(shell find $(SRC_DIR) -name "*".cpp)
 OBJS            :=	$(patsubst $(SRC_DIR)/%.cpp, $(OBJ_DIR)/%.o, $(SRCS))
 DEPS            :=	$(patsubst $(SRC_DIR)/%.cpp, $(DEP_DIR)/%.d, $(SRCS))
 
@@ -61,7 +61,7 @@ COMPILED_FILES  :=	0
 #    Define the target                                                         #
 # ---------------------------------------------------------------------------- #
 
-NAME            :=	megaphone
+NAME            :=	phonebook
 
 # ---------------------------------------------------------------------------- #
 #    Define the rules                                                          #
